@@ -3,8 +3,8 @@
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
+  --button-primary-hover: #000000;
+  --button-secondary-hover: #000000;
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
@@ -22,8 +22,8 @@
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    --button-primary-hover: #000000;
+    --button-secondary-hover: #000000;
   }
 }
 
@@ -165,4 +165,29 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.abaLateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40vh;
+  height: 100vh;
+  background-color: #FFBEDD;
+  z-index: 1;
+}
+
+.circle {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: #FFBEDD;
+  color: #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
