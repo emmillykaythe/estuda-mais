@@ -5,6 +5,9 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <div className = {styles.abaLateral} ></div>
+        <div className={styles.circle}>Perfil</div>  
+      
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -89,7 +92,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> 
     </div>
   );
 }
