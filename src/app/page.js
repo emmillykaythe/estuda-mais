@@ -5,10 +5,13 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className = {styles.abaLateral} ></div>
+        <div className = {styles.abaLateral} >
+            <Image src="./next.svg" width={100} height={100} alt="Vercel"></Image>
+
+        </div>
         <div className={styles.circle}>Perfil</div>  
       
-        <Image
+       {/*<Image
           className={styles.logo}
           src="/next.svg"
           alt="Next.js logo"
@@ -21,9 +24,9 @@ export default function Home() {
             Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
-        </ol>
+        </ol>*/}
 
-        <div className={styles.ctas}>
+      {/* <div className={styles.ctas}>
           <a
             className={styles.primary}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -47,7 +50,7 @@ export default function Home() {
           >
             Read our docs
           </a>
-        </div>
+        </div>*/}
       </main>
       <footer className={styles.footer}>
         <a
