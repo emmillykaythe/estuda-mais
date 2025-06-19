@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.page}>
      {/* <main className={styles.main}> */}
         <div className = {styles.abaLateral} >
-        <Image className ={styles.logo} src="/logo-inicial.png" width="350" height="350" alt="Logo" />
+        <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo" />
     </div>      
     <div className={styles.container}>
     <div className={styles.caixaform}>
