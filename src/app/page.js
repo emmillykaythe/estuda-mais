@@ -8,7 +8,9 @@ export default function Home() {
         <div className = {styles.abaLateral} >
         <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo" />
     </div>      
-    <div className={styles.container}>
+        <div className={styles.container}>
+        <Image className = {styles.usuario} src="/usuario.png" width="370" height="200" alt="usuario" /> 
+
     <div className={styles.caixaform}>
       <input className={styles.input} type="email" placeholder="Digite seu email" />
       <input className={styles.input} type="password" placeholder="Digite sua senha" />
