@@ -180,46 +180,53 @@ a.secondary {
 .logo {
   filter: sepia(100%);
   height: auto;
-  margin: 357px auto;    
+  margin: 350px auto;    
   display: block; 
 }
 
+
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 808px;
+  display: flex;  /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  align-items: center; /*coloca os botões no centro*/
+  margin-top: 600px; /*define a altura da caixa completa*/
+  margin-left: 300px; /*traz o container todo para direita*/
 }
 
 .caixaform{
   background-color: #FEADA6;
-  padding: 15px;
-  border-radius: 10px;
-  width: 294px;
-  height: 263px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  gap: 15px;             
+  padding: 50px 15px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  border-radius: 10px; /*arredonda as bordas*/
+  width: 294px; /*define o tamanho das caixas - comprimento*/
+  height: 263px; /*define o tamanho da caixa - altura */
+  display: flex; /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  justify-content: center; /*coloca as caixas no centro*/
+  gap: 28px; /*define a distancia das caixas*/    
 }
 
 .input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 100%;
-  text-align: center;
+  padding: 10px; /*define o tamanho das caixas - altura*/
+  border: none; /*remove a borda*/
+  border-radius: 5px; /*arredonda as bordas*/
+  font-size: 14px; /*tamanho do texto*/
+  width: 100%; /*define o tamanho das caixas - comprimento*/
+  text-align: center; /*coloca o texto no centro*/
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377); /*adiciona um sombreamento no texto*/
+
 }
 
 .button {
-  margin-top: 10px;
+  margin-top: 7px; /*distancia do botão*/
   background-color: #FEADA6;
-  border: none;
-  padding: 10px;
-  width: 139px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  border: none; /*remove a borda*/ 
+  padding: 6px; /*define o tamanho das caixas - altura */
+  width: 139px; /*define o tamanho das caixas - comprimento*/
+  border-radius: 5px; /*arredonda as bordas*/
+  font-weight: bold; /*deixa em negrito*/
+}
+
+.usuario{
+  transform: translateY(45%); /*alinha ele em cima do container*/
+  object-fit: contain; /*ajusta a imagem de acordo como ta la no page.js*/
 }
