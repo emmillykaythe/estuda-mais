@@ -25,13 +25,13 @@ export default function Home() {
     <div className={styles.genero}>Gênero</div>
     <div className={styles.campoGenero}>
         <label>
-            <input type="radio" name="gênero"/> <span>F</span>
+            <input type="radio" name="gênero"/> <span> F </span>
         </label>
         <label> 
-            <input type="radio" name="gênero"/> <span>M</span>
+            <input type="radio" name="gênero"/> <span> M </span>
         </label>
         <label> 
-             <input type="radio" name="gênero"/> <span>Outro</span>
+             <input type="radio" name="gênero"/> <span> Outro </span>
         </label>
     </div>
 
