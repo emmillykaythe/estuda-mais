@@ -1,0 +1,72 @@
+.abaLateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40vh;
+  height: 100vh;
+  background-color: #FEADA6;
+  z-index: -1;
+}
+
+.logo {
+  filter: sepia(100%);
+  height: auto;
+  margin: 350px auto;    
+}
+
+.container {
+  display: flex;  /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  align-items: center; /*coloca os botões no centro*/
+  margin-top: 250px; /*define a altura da caixa completa*/
+  margin-left: 300px; /*traz o container todo para direita*/
+}
+
+.caixaform{
+  background-color: #FEADA6;
+  padding: 30px 30px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  border-radius: 10px; /*arredonda as bordas*/
+  width: 590px; /*define o tamanho das caixas - comprimento*/
+  height: 590px; /*define o tamanho da caixa - altura */
+  display: flex; /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  justify-content: center; /*coloca as caixas no centro*/
+  gap: 28px; /*define a distancia das caixas*/    
+}
+
+.input {
+  padding: 10px; /*define o tamanho das caixas - altura*/
+  border: none; /*remove a borda*/
+  border-radius: 5px; /*arredonda as bordas*/
+  font-size: 14px; /*tamanho do texto*/
+  width: 100%; /*define o tamanho das caixas - comprimento*/
+}
+
+
+.button {
+  background-color: #ffffff;
+  border: none; /*remove a borda*/ 
+  border-radius: 5px; /*arredonda as bordas*/
+  font-weight: bold; /*deixa em negrito*/
+  padding: 10px; /*define o tamanho da caixa - altura*/
+  width: 158px; /*define o tamanho da caixa - comprimento*/
+  margin: 0 auto; /*centraliza o botão no meio*/
+}
+
+.data {
+  display: flex; /*define a distancias das caixas de dentro*/
+  gap: 38px; /*define o espaço entre as caixas*/
+}
+
+.campoData {
+  padding: 10px; /*define o tamanho da caixa*/
+  border: none;
+  border-radius: 5px;
+  width: 79px;   /* Tamanho igual para os campos */
+}
+
+.genero {
+  display: flex; /*define a distancias das caixas de dentro*/
+  gap: 38px; /*define o espaço entre as caixas*/
+}
+
