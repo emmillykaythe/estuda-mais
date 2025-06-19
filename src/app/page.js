@@ -4,27 +4,18 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+     {/* <main className={styles.main}> */}
         <div className = {styles.abaLateral} >
-            <Image src="./next.svg" width={100} height={100} alt="Vercel"></Image>
-
-        </div>
-        <div className={styles.circle}>Perfil</div>  
-      
-       {/*<Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>*/}
+        <Image className ={styles.logo} src="/logo-inicial.png" width="350" height="350" alt="Logo" />
+    </div>      
+    <div className={styles.container}>
+    <div className={styles.caixaform}>
+      <input className={styles.input} type="email" placeholder="Digite seu email" />
+      <input className={styles.input} type="password" placeholder="Digite sua senha" />
+    </div>
+      <button className={styles.button}>LOGIN</button>
+      <button className={styles.button}>SIGN UP</button>
+    </div>
 
       {/* <div className={styles.ctas}>
           <a
@@ -51,8 +42,8 @@ export default function Home() {
             Read our docs
           </a>
         </div>*/}
-      </main>
-      <footer className={styles.footer}>
+     {/* </main> */}
+      {/*<footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
@@ -95,7 +86,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer> 
+      </footer> */}
     </div>
   );
 }
