@@ -18,19 +18,18 @@
   display: flex;  /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
   align-items: center; /*coloca os botões no centro*/
-  margin-top: 250px; /*define a altura da caixa completa*/
-  margin-left: 300px; /*traz o container todo para direita*/
+  margin-top: 230px; /*define a altura da caixa completa*/
+  margin-left: 300px ; /*traz o container todo para direita*/
 }
 
-.caixaform{
+.caixaform{ 
   background-color: #FEADA6;
   padding: 30px 30px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
   border-radius: 10px; /*arredonda as bordas*/
-  width: 590px; /*define o tamanho das caixas - comprimento*/
-  height: 590px; /*define o tamanho da caixa - altura */
+  width: 550px; /*define o tamanho das caixas - comprimento*/
+  height: 520px; /*define o tamanho da caixa - altura */
   display: flex; /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
-  justify-content: center; /*coloca as caixas no centro*/
   gap: 28px; /*define a distancia das caixas*/    
 }
 
@@ -40,33 +39,78 @@
   border-radius: 5px; /*arredonda as bordas*/
   font-size: 14px; /*tamanho do texto*/
   width: 100%; /*define o tamanho das caixas - comprimento*/
+  padding-left: 45px;
 }
-
 
 .button {
   background-color: #fffffff8;
   border: none; /*remove a borda*/ 
   border-radius: 5px; /*arredonda as bordas*/
   font-weight: bold; /*deixa em negrito*/
-  padding: 10px; /*define o tamanho da caixa - altura*/
+  padding: 12px; /*define o tamanho da caixa - altura*/
   width: 158px; /*define o tamanho da caixa - comprimento*/
   margin: 0 auto; /*centraliza o botão no meio*/
-}
-
-.data {
-  display: flex; /*define a distancias das caixas de dentro*/
-  gap: 38px; /*define o espaço entre as caixas*/
+  font-size: 16px;
 }
 
 .campoData {
+  display: flex; /*define a distancias das caixas de dentro*/
+  gap: 40px; /*define o espaço entre as caixas*/
+}
+
+.opcaoData {
   padding: 10px; /*define o tamanho da caixa*/
   border: none;
   border-radius: 5px;
-  width: 79px;   /* Tamanho igual para os campos */
+  width: 180px;   /* Tamanho igual para os campos */
 }
 
-.genero {
-  display: flex; /*define a distancias das caixas de dentro*/
-  gap: 38px; /*define o espaço entre as caixas*/
+.campoGenero {
+  display: flex; /*coloca as opções lado a lado*/
+  gap: 40px; /*distância entre as opções*/
 }
+
+.opcaoGenero {
+  background-color: #ffffff; 
+  padding: 10px 12px; /*1º valor define o tamanho da caixa (altura); 2º valor define a distancia da letra com o selecionar*/
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* separa texto da seleção */
+  width: 180px; 
+  font-size: 16px; 
+}
+
+.nome {
+  position: relative; /*faz com que o icone se posicione de acordo com o input */
+}
+
+.perfil {
+  position: absolute;
+  left: 15px; /*distancia do icone com a margem*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.email {
+  position: relative; /*faz com que o icone se posicione de acordo com o input */
+}
+
+.caixaEmail {
+  position: absolute;
+  left: 15px; /*distancia do icone com a margem*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.senha {
+  position: relative; /*faz com que o icone se posicione de acordo com o input */
+}
+
+.cadeadoSenha {
+  position: absolute;
+  left: 15px; /*distancia do icone com a margem*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 

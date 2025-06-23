@@ -6,33 +6,43 @@ export default function Home() {
     <div className={styles.page}>
     
     <div className = {styles.abaLateral}>  
-        <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo"/></div> 
+      <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo"/></div> 
     
     <div className={styles.container}>    
     <div className={styles.caixaform} >
-      <input className={styles.input} type="nome" placeholder="Nome Completo" />
-    
+
+    <div className={styles.nome}>  
+      <Image className ={styles.perfil} src="/perfil-cadastro.png" width="20" height="20" alt="Perfil"/>
+      <input className={styles.input} type="nome" placeholder="Nome Completo" /></div>
+          
     <label className={styles.label}>Data de Nascimento</label>
-    <div className={styles.data}> 
-        <select className={styles.campoData}></select>
-        <select className={styles.campoData}></select>
-        <select className={styles.campoData}></select>
+    <div className={styles.campoData}> 
+        <select className={styles.opcaoData}></select>
+        <select className={styles.opcaoData}></select>
+        <select className={styles.opcaoData}></select>
     </div>
 
-      <input className={styles.input} type="email" placeholder="Email" />
-      <input className={styles.input} type="password" placeholder="Senha" />
-      
+    <div className={styles.email}>
+      <Image className ={styles.caixaEmail} src="/email-cadastro.png" width="20" height="20" alt="Perfil"/>
+      <input className={styles.input} type="email" placeholder="Email" /></div>
+    <div className={styles.senha}> 
+      <Image className ={styles.cadeadoSenha} src="/senha-cadastro.png" width="20" height="20" alt="Perfil"/>
+      <input className={styles.input} type="password" placeholder="Senha" /></div>
+    
     <div className={styles.genero}>Gênero</div>
-    <div className={styles.campoGenero}>
-        <label>
-            <input type="radio" name="gênero"/> <span> F </span>
-        </label>
-        <label> 
-            <input type="radio" name="gênero"/> <span> M </span>
-        </label>
-        <label> 
-             <input type="radio" name="gênero"/> <span> Outro </span>
-        </label>
+      <div className={styles.campoGenero}>
+          <label className={styles.opcaoGenero}>
+            F
+      <input type="radio" name="gênero" /> 
+          </label>
+          <label className={styles.opcaoGenero}>
+            M
+      <input type="radio" name="gênero" /> 
+          </label>
+          <label className={styles.opcaoGenero}>
+            Outro 
+      <input type="radio" name="gênero" /> 
+          </label>
     </div>
 
     <button className={styles.button}>Cadastre-se</button>
