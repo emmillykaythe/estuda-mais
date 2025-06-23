@@ -24,10 +24,10 @@
 
 .caixaform{ 
   background-color: #FEADA6;
-  padding: 30px 30px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  padding: 30px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
   border-radius: 10px; /*arredonda as bordas*/
-  width: 550px; /*define o tamanho das caixas - comprimento*/
-  height: 520px; /*define o tamanho da caixa - altura */
+  width: 500px; /*define o tamanho das caixas - comprimento*/
+  height: auto; /*define o tamanho da caixa - altura */
   display: flex; /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
   gap: 28px; /*define a distancia das caixas*/    
@@ -47,7 +47,7 @@
   border: none; /*remove a borda*/ 
   border-radius: 5px; /*arredonda as bordas*/
   font-weight: bold; /*deixa em negrito*/
-  padding: 12px; /*define o tamanho da caixa - altura*/
+  padding: 12px ; /*define o tamanho da caixa - altura*/
   width: 158px; /*define o tamanho da caixa - comprimento*/
   margin: 0 auto; /*centraliza o botão no meio*/
   font-size: 16px;
@@ -55,14 +55,28 @@
 
 .campoData {
   display: flex; /*define a distancias das caixas de dentro*/
-  gap: 40px; /*define o espaço entre as caixas*/
+  gap: 25px; /*define o espaço entre as caixas*/
 }
 
-.opcaoData {
+.opcaoDia {
   padding: 10px; /*define o tamanho da caixa*/
   border: none;
   border-radius: 5px;
-  width: 180px;   /* Tamanho igual para os campos */
+  width: 70%;   /* Tamanho igual para os campos */
+}
+
+.opcaoMes {
+  padding: 10px; /*define o tamanho da caixa*/
+  border: none;
+  border-radius: 5px;
+  width: 70%;   /* Tamanho igual para os campos */
+}
+
+.opcaoAno {
+  padding: 10px; /*define o tamanho da caixa*/
+  border: none;
+  border-radius: 5px;
+  width: 100%;   /* Tamanho igual para os campos */
 }
 
 .campoGenero {
@@ -76,7 +90,7 @@
   border-radius: 5px;
   display: flex;
   justify-content: space-between; /* separa texto da seleção */
-  width: 180px; 
+  width: 100%; 
   font-size: 16px; 
 }
 
