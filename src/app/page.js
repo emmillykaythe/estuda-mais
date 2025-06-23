@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,7 +16,10 @@ export default function Home() {
       <input className={styles.input} type="password" placeholder="Digite sua senha" />
     </div>
       <button className={styles.button}>LOGIN</button>
+      
+      <Link href ='/cadastro'> 
       <button className={styles.button}>SIGN UP</button>
+      </Link>
     </div>
     </div>
   );
