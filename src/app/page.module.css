@@ -167,6 +167,7 @@ a.secondary {
   }
 }
 
+
 .abaLateral {
   position: fixed;
   top: 0;
@@ -174,38 +175,36 @@ a.secondary {
   width: 40vh;
   height: 100vh;
   background-color: #FEADA6;
-  z-index: -1;
-}
+  }
 
 .logo {
-  filter: sepia(100%);
+  filter: sepia(); 
   height: auto;
-  margin: 350px auto;    
+  margin: 21.5rem auto;    
 }
-
 
 .container {
   display: flex;  /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
   align-items: center; /*coloca os botões no centro*/
-  margin-top: 600px; /*define a altura da caixa completa*/
-  margin-left: 300px; /*traz o container todo para direita*/
+  margin-top: 35.5rem; /*define a altura da caixa completa*/
+  margin-left: 18.75rem; /*traz o container todo para direita*/
 }
 
 .caixaform{
   background-color: #FEADA6;
-  padding: 50px 15px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  padding: 3.125rem 0.9375rem 0.9375rem; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
   border-radius: 10px; /*arredonda as bordas*/
-  width: 294px; /*define o tamanho das caixas - comprimento*/
-  height: 263px; /*define o tamanho da caixa - altura */
+  width: 18.375rem; /*define o tamanho das caixas - comprimento*/
+  height: 16.4375rem; /*define o tamanho da caixa - altura */
   display: flex; /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
   justify-content: center; /*coloca as caixas no centro*/
-  gap: 28px; /*define a distancia das caixas*/    
+  gap: 1.75rem; /*define a distancia das caixas*/    
 }
 
 .input {
-  padding: 10px; /*define o tamanho das caixas - altura*/
+  padding: 0.625rem; /*define o tamanho das caixas - altura*/
   border: none; /*remove a borda*/
   border-radius: 5px; /*arredonda as bordas*/
   font-size: 14px; /*tamanho do texto*/
@@ -216,11 +215,11 @@ a.secondary {
 }
 
 .button {
-  margin-top: 7px; /*distancia do botão*/
+  margin-top: 0.4375rem; /*distancia do botão*/
   background-color: #FEADA6;
   border: none; /*remove a borda*/ 
-  padding: 6px; /*define o tamanho das caixas - altura */
-  width: 139px; /*define o tamanho das caixas - comprimento*/
+  padding: 0.375rem; /*define o tamanho das caixas - altura */
+  width: 8.6875rem; /*define o tamanho das caixas - comprimento*/
   border-radius: 5px; /*arredonda as bordas*/
   font-weight: bold; /*deixa em negrito*/
 }
