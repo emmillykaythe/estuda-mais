@@ -10,60 +10,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 40vh;
+  width: 20vw;
   height: 100vh;
   background-color: #FEADA6;
+  justify-content: flex-start;
   display: flex;
-  justify-content: center;
   align-items: center;
   }
 
 .logo {
   filter: sepia(); 
   height: auto;
-}
-
-.container {
-  display: flex;  /*define a distancias das caixas de dentro*/
-  flex-direction: column; /*organiza em colunas*/
-  align-items: center; /*coloca os botões no centro*/
-  margin-top: 790px; /*define a altura da caixa completa*/
-  margin-left: 375px; /*traz o container todo para direita*/
-}
-
-.caixaform{
-  background-color: #FEADA6;
-  padding: 50px 15px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
-  border-radius: 10px; /*arredonda as bordas*/
-  width: 320px; /*define o tamanho das caixas - comprimento*/
-  height: 290px; /*define o tamanho da caixa - altura */
-  display: flex; /*define a distancias das caixas de dentro*/
-  flex-direction: column; /*organiza em colunas*/
-  justify-content: center; /*coloca as caixas no centro*/
-  gap: 28px; /*define a distancia das caixas*/    
-}
-
-.input {
-  padding: 10px; /*define o tamanho das caixas - altura*/
-  border: none; /*remove a borda*/
-  border-radius: 5px; /*arredonda as bordas*/
-  font-size: 14px; /*tamanho do texto*/
-  width: 100%;  /*define o tamanho das caixas - comprimento*/
-  text-align: center; /*coloca o texto no centro*/
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377); /*adiciona um sombreamento no texto*/
-}
-
-.button {
-  margin-top: 19px; /*distancia do botão*/
-  background-color: #FEADA6;
-  border: none; /*remove a borda*/ 
-  padding: 8px; /*define o tamanho das caixas - altura */
-  width: 150px; /*define o tamanho das caixas - comprimento*/
-  border-radius: 5px; /*arredonda as bordas*/
-  cursor: pointer;
-}
-
-.usuario{
-  transform: translateY(45%); /*alinha ele em cima do container*/
-  object-fit: contain; /*ajusta a imagem de acordo como ta la no page.js*/
+  display: block;
+  max-width: 100%;
 }
