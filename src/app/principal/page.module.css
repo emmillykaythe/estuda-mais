@@ -1,0 +1,36 @@
+.abaLateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: #FEADA6;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  }
+
+.logo {
+  filter: sepia(100%);
+  height: auto;
+  margin: 50px;
+}
+
+.acessoRapido {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}
+
+/* Estilo dos botões */
+.button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 70px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;        
+}
