@@ -66,6 +66,10 @@
  width: 150px; /*define o tamanho das caixas - comprimento*/
  border-radius: 5px; /*arredonda as bordas*/
  cursor: pointer;
+ text-align: center;
+ color: #000;
+ text-decoration: none; /*remove o sublinhado do link*/
+ font-size: 14px;
 }
 
 
