@@ -51,6 +51,10 @@
   width: 158px; /*define o tamanho da caixa - comprimento*/
   margin: 0 auto; /*centraliza o botão no meio*/
   font-size: 16px;
+  display: block;
+  text-decoration: none;
+  color: #000; 
+  text-align: center;
 }
 
 .campoData {

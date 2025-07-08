@@ -52,9 +52,7 @@ export default function Home() {
       <input type="radio" name="gênero" /> 
           </label>
     </div>
-
-    <button className={styles.button}>Cadastre-se</button>
-
+     <Link href="/principal" className={styles.button}> Cadastre-se </Link>
     </div>
     </div>
     </div>
