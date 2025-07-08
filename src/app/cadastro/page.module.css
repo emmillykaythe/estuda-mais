@@ -127,4 +127,9 @@
   transform: translateY(-50%);
 }
 
-
+.buttonVoltar {
+  position: absolute;
+  top: 10px;
+  left: 21%;
+  cursor: pointer;  
+}

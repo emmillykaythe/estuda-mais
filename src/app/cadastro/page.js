@@ -1,16 +1,24 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <div className={styles.page}>
-    
+
+    <Link href="/" >  
+    <div className={styles.voltar}>
+      <Image className = {styles.buttonVoltar} src="/voltar.png" width="20" height="20" alt="Voltar"/>
+    </div>
+    </Link>
+
     <div className = {styles.abaLateral}>  
       <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo"/></div> 
     
     <div className={styles.container}>    
     <div className={styles.caixaform} >
-
+    
     <div className={styles.nome}>  
       <Image className ={styles.perfil} src="/perfil-cadastro.png" width="20" height="20" alt="Perfil"/>
       <input className={styles.input} type="nome" placeholder="Nome Completo" /></div>
