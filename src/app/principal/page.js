@@ -26,6 +26,7 @@ export default function Home() {
 
     <div className= {styles.acessoRapido}>
       <button className={styles.button}>
+          
           <Image className={styles.material} src ="/material.png" width="25" height="25" alt="Material"></Image>
       <span>Materiais</span> </button>
 
