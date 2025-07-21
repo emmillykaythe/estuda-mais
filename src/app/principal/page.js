@@ -12,7 +12,7 @@ export default function Home() {
     </Link>
 
     <div className = {styles.abaLateral}>  
-      <Image className ={styles.logo} src="/logo-principal.png" width="350" height="400" alt="Logo"/> 
+      <Image className ={styles.logo} src="/logo.png" width="350" height="400" alt="Logo"/> 
 
     <div className={styles.inicioAcesso}> 
       <button className={styles.button}>

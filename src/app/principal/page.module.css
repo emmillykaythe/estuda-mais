@@ -8,16 +8,16 @@
   flex-direction: column;
   display: flex;
   align-items: center;
+  padding-top: 50px; 
+  gap: 50px;
   }
 
 .logo {
   filter: sepia(100%);
   height: auto;
-  margin: 75px;
 }
 
 .acessoRapido {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -25,11 +25,10 @@
 }
 
 .inicioAcesso {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 55%;
 }
 
 .button {
@@ -56,8 +55,8 @@
 .divisao{
   width: 82%;
   height: 1px;
-  background-color: #000; /* ou outra cor que combine */
-  margin-bottom: 35px;
+  background-color: #000; 
+  
 }
 
 .container {

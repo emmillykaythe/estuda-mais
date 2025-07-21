@@ -8,7 +8,7 @@ export default function Home() {
    <div className={styles.page}>
 
    <div className={styles.logoInicial}>
-        <Image className={styles.logo} src="/logo-principal.png" width="300" height="200" alt="Logo Estuda+"/>
+        <Image className={styles.logo} src="/logo.png" width="200" height="200" alt="Logo Estuda+"/>
     </div>
    
     <div className={styles.botaoVoltar}>

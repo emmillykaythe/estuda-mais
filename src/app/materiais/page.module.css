@@ -1,7 +1,5 @@
 .logoInicial { 
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;
 }
 
 .botaoVoltar {
