@@ -43,6 +43,8 @@
   gap: 12px; 
   width: 220px;
   padding-left: 25%;
+  color:#000;
+  text-decoration: none; 
 }
 
 .buttonVoltar {
@@ -78,6 +80,8 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  color: #000;
+  text-decoration: none;
 }
 
 .texto h2 {  

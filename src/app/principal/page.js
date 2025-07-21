@@ -25,10 +25,9 @@ export default function Home() {
     </div>
 
     <div className= {styles.acessoRapido}>
-      <button className={styles.button}>
-          
-          <Image className={styles.material} src ="/material.png" width="25" height="25" alt="Material"></Image>
-      <span>Materiais</span> </button>
+      <Link href = "/materiais" className={styles.button}> 
+     <Image className={styles.material} src ="/material.png" width="25" height="25" alt="Material"></Image> 
+      <span>Materiais</span> </Link>
 
         <button className={styles.button}> 
           <Image className={styles.simulado} src ="/simulados.png" width="25" height="25" alt="Simulados"></Image>
@@ -37,13 +36,13 @@ export default function Home() {
     </div>
     <div className={styles.container}>
 
-      <div className={styles.caixa}>
+      <Link href = "/materiais" className={styles.caixa}>
         <Image className={styles.material} src ="/material.png" width="120" height="120" alt="Material"/>
         <div className={styles.texto}>
       <h2>Materiais</h2>
       <p>Acesse conteúdos completos para reforçar seus estudos.</p>
         </div>
-      </div>  
+      </Link>  
 
     <div className={styles.caixa}>
         <Image className={styles.simulado} src ="/simulados.png" width="120" height="120" alt="Simulados"/>
