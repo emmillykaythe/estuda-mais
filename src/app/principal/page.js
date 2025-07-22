@@ -25,7 +25,7 @@ export default function Home() {
     </div>
 
     <div className= {styles.acessoRapido}>
-      <Link href = "/materiais" className={styles.button}> 
+      <Link href = "/material" className={styles.button}> 
      <Image className={styles.material} src ="/material.png" width="25" height="25" alt="Material"></Image> 
       <span>Materiais</span> </Link>
 
@@ -36,7 +36,7 @@ export default function Home() {
     </div>
     <div className={styles.container}>
 
-      <Link href = "/materiais" className={styles.caixa}>
+      <Link href = "/material" className={styles.caixa}>
         <Image className={styles.material} src ="/material.png" width="120" height="120" alt="Material"/>
         <div className={styles.texto}>
       <h2>Materiais</h2>
