@@ -27,9 +27,22 @@
 
 .itemMaterial {
   background-color: #FEADA6;
+  font-weight: bold;
   padding: 15px;
   border-radius: 5px;
   width: 90vw;    
+}
+
+.itemMaterialConteudo {
+  background-color: #ffdad7;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 5px;
+  width: 90vw;    
+}
+
+.itemMaterial p {
+  font-size: 16px;
 }
 
 .itemMaterial p {
