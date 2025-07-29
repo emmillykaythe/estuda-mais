@@ -25,9 +25,7 @@ export default function Home() {
           
     <label className={styles.label}>Data de Nascimento</label>
     <div className={styles.campoData}> 
-        <select className={styles.opcaoDia}></select>
-        <select className={styles.opcaoMes}></select>
-        <select className={styles.opcaoAno}></select>
+        <input className={styles.input} type="date"></input>
     </div>
 
     <div className={styles.email}>
