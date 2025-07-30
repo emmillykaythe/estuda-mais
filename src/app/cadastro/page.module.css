@@ -59,30 +59,15 @@
   text-align: center;
 }
 
-.campoData {
-  display: flex; /*define a distancias das caixas de dentro*/
-  gap: 25px; /*define o espaço entre as caixas*/
+.campoData{
+  position: relative;
 }
 
-.opcaoDia {
-  padding: 10px; /*define o tamanho da caixa*/
-  border: none;
-  border-radius: 5px;
-  width: 70%;   /* Tamanho igual para os campos */
-}
-
-.opcaoMes {
-  padding: 10px; /*define o tamanho da caixa*/
-  border: none;
-  border-radius: 5px;
-  width: 70%;   /* Tamanho igual para os campos */
-}
-
-.opcaoAno {
-  padding: 10px; /*define o tamanho da caixa*/
-  border: none;
-  border-radius: 5px;
-  width: 100%;   /* Tamanho igual para os campos */
+.calendario {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  transform: translateY(-50%);
 }
 
 .campoGenero {

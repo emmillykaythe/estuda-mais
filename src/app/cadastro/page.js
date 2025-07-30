@@ -25,6 +25,7 @@ export default function Home() {
           
     <label className={styles.label}>Data de Nascimento</label>
     <div className={styles.campoData}> 
+        <Image className ={styles.calendario} src="/calendario-cadastro.png" width="20" height="20" alt="Calendário"/>
         <input className={styles.input} type="date"></input>
     </div>
 
