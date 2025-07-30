@@ -5,15 +5,16 @@ import db from "@/lib/db";
 import Accordion from "@components/accordion";
 
 export default async function MaterialPage() {
-  
   const materiais = await db.query("select * from material");
+
   const listaConteudos = [
   { id: 1, nome: 'Vídeo aulas' },
   { id: 2, nome: 'Resumos' },
   { id: 3, nome: 'Listas de exercícios' },
 ];
+
   const conteudos = listaConteudos.map(item =>
-    <Accordion key={item.id} className={styles.itemMaterial} titulo={`${item.nome}`} itens={["abc", "cde", "efg"]} />
+    <Accordion key={item.id} className={styles.subItemMaterial} titulo={`${item.nome}`} itens={["Link com o professor 1", "Link com o professor 2", "Link com o professor 3"]} />
   )
 
   console.log(conteudos);

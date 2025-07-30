@@ -58,7 +58,6 @@
   width: 82%;
   height: 1px;
   background-color: #000; 
-  
 }
 
 .container {
@@ -75,15 +74,15 @@
   border-radius: 10px;
   width: 320px;
   height: 180px;
-  padding: 1.5rem;
+  gap: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   align-items: center;
   color: #000;
   text-decoration: none;
 }
-
+  
 .texto h2 {  
   font-size: 25px;
 }
@@ -91,7 +90,6 @@
 .texto p {
   font-size: 12px;
 }
-
 
 .manequim {
   display: flex;
