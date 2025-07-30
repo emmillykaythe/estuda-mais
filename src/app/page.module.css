@@ -13,9 +13,9 @@
   width: 20vw;
   height: 100vh;
   background-color: #FEADA6;
-  justify-content: flex-start;
   display: flex;
-  align-items: center;
+  justify-content: center; 
+  align-items: center;  
   }
 
 .logo {

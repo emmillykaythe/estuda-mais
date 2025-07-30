@@ -2,10 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
   width: 40vh;
   height: 100vh;
   background-color: #FEADA6;
   z-index: -1;
+  align-items: center;  
 }
 
 .logo {

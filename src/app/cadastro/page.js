@@ -14,7 +14,7 @@ export default function Home() {
     </Link>
 
     <div className = {styles.abaLateral}>  
-      <Image className ={styles.logo} src="/logo-principal.png" width="350" height="350" alt="Logo"/></div> 
+      <Image className ={styles.logo} src="/logo-apresentação.png" width="200" height="200" alt="Logo"/></div> 
     
     <div className={styles.container}>    
     <div className={styles.caixaform} >
