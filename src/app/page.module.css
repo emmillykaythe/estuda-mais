@@ -29,10 +29,11 @@
  display: flex;  /*define a distancias das caixas de dentro*/
  flex-direction: column; /*organiza em colunas*/
  align-items: center; /*coloca os botões no centro*/
- margin-top: 790px; /*define a altura da caixa completa*/
- margin-left: 375px; /*traz o container todo para direita*/
+ top: 45%; /*define a altura da caixa completa*/
+ left: calc(50% + 120px); /*traz o container todo para direita*/
+ transform: translate(-50%, -50%);
+ position: absolute;
 }
-
 
 .caixaform{
  background-color: #FEADA6;

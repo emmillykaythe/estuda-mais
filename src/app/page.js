@@ -6,7 +6,7 @@ export default function Home() {
   return (
   <div className={styles.page}>
     <div className = {styles.abaLateral} >
-      <Image className ={styles.logo} src="/logo-apresentação.png" width="200" height="200" alt="Logo" />
+      <Image className ={styles.logo} src="/logo-apresentação.png" width="150" height="150" alt="Logo" />
   </div>      
     <div className={styles.container}>
       <Image className = {styles.usuario} src="/usuario-login.png" width="370" height="200" alt="usuario" />
