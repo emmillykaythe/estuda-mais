@@ -44,14 +44,15 @@ export default function Home() {
         </div>
       </Link>  
 
-    <div className={styles.caixa}>
-        <Image className={styles.simulado} src ="/simulados-principal.png" width="120" height="120" alt="Simulados"/>
-        <div className={styles.texto}>
-      <h2>Simulados</h2>
-      <p>Faça simulados e acompanhe sua evolução no aprendizado.</p>
+     <Link href="/simulados" className={styles.caixa}>
+       <Image className={styles.simulado} src="/simulados-principal.png" width="120" height="120" alt="Simulados" />
+       <div className={styles.texto}>
+     <h2>Simulados</h2>
+     <p>Faça simulados e acompanhe sua evolução no aprendizado.</p>
+       </div>
+      </Link> 
+  
     </div>
-      </div>  
-        </div>
         
         <div className={styles.manequim}>
         <Image className={styles.modelo} src ="/modelo-principal.png" width="200" height="200" alt="Modelo estuda+"/>
