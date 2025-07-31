@@ -2,8 +2,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 390px;
-  height: 100vh;
+  width: 20%;
+  max-width: 350px; 
+  min-width: 280px;
+  height: 100%;
   background-color: #FEADA6;
   flex-direction: column;
   display: flex;
@@ -13,7 +15,8 @@
   }
 
 .logo {
-  filter: sepia(100%);
+  width: 70%; /* O logo ocupará 70% da largura da abaLateral */
+  max-width: 200px; /* Um limite para não ficar gigante em telas muito grandes */
   height: auto;
 }
 
@@ -47,17 +50,17 @@
   text-decoration: none; 
 }
 
+.divisao{
+  width: 82%;
+  height: 1px;
+  background-color: #000; 
+}
+
 .buttonVoltar {
   position: absolute;
   top: 10px;
   left: 21%;
   cursor: pointer;  
-}
-
-.divisao{
-  width: 82%;
-  height: 1px;
-  background-color: #000; 
 }
 
 .container {
