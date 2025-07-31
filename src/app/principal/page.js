@@ -37,7 +37,7 @@ export default function Home() {
     <div className={styles.container}>
 
       <Link href = "/material" className={styles.caixa}>
-        <Image className={styles.material} src ="/material-principal.png" width="120" height="120" alt="Material"/>
+        <Image className={styles.material} src ="/material-principal.png" width="110" height="110" alt="Material"/>
         <div className={styles.texto}>
       <h2>Materiais</h2>
       <p>Acesse conteúdos completos para reforçar seus estudos.</p>

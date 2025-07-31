@@ -15,8 +15,8 @@
   }
 
 .logo {
-  width: 70%; /* O logo ocupará 70% da largura da abaLateral */
-  max-width: 200px; /* Um limite para não ficar gigante em telas muito grandes */
+  width: 85%; /* O logo ocupará 70% da largura da abaLateral */
+  max-width: 260px; /* Um limite para não ficar gigante em telas muito grandes */
   height: auto;
 }
 
@@ -59,7 +59,7 @@
 .buttonVoltar {
   position: absolute;
   top: 10px;
-  left: 21%;
+  left: 19%;
   cursor: pointer;  
 }
 
@@ -75,8 +75,8 @@
 .caixa {
   background-color: #fda4a4;
   border-radius: 10px;
-  width: 320px;
-  height: 180px;
+  width: 380px;
+  height: 200px;
   gap: 1rem;
   padding: 2rem;
   display: flex;
@@ -99,7 +99,40 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-left: 20vw; /* compensa a barra lateral */
+  margin-left: 20vw; 
 }
 
+@media (max-width: 1200px) {
+  .abaLateral {
+    width: 25%;
+    min-width: 220px;
+  }
 
+  .logo {
+    width: 60%;
+    max-width: 170px;
+  }
+
+  .inicioAcesso {
+    width: 70%;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 200px;
+    padding-left: 20%;
+  }
+
+  .container {
+    margin-left: 43%;
+    width: 40%;
+    padding: 20px;
+    gap: 20px;
+    
+  }
+
+  .manequim {
+    width: 80%;
+    max-width: 100%;
+  }
+}
