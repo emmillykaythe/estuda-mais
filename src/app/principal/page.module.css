@@ -58,8 +58,8 @@
 
 .buttonVoltar {
   position: absolute;
-  top: 10px;
-  left: 19%;
+  top: 12px;
+  left: 23%;
   cursor: pointer;  
 }
 
@@ -118,7 +118,7 @@
     height: 300px;
   }*/
 
-  .button {
+  .buttonVoltar {
     font-size: 20px;
     width: 200px;
     padding-left: 20%;
