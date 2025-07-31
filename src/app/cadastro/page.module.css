@@ -2,33 +2,36 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  width: 40vh;
+  width: 20vw;
   height: 100vh;
   background-color: #FEADA6;
-  z-index: -1;
+  display: flex;
+  justify-content: center; 
   align-items: center;  
-}
+  }
 
 .logo {
-  filter: sepia(100%);
+  filter: sepia(); 
   height: auto;
-  margin: 350px auto;    
+  display: block;
+  max-width: 100%;
 }
 
 .container {
-  display: flex;  /*define a distancias das caixas de dentro*/
-  flex-direction: column; /*organiza em colunas*/
-  align-items: center; /*coloca os botões no centro*/
-  margin-top: 230px; /*define a altura da caixa completa*/
-  margin-left: 300px ; /*traz o container todo para direita*/
+ display: flex;  /*define a distancias das caixas de dentro*/
+ flex-direction: column; /*organiza em colunas*/
+ align-items: center; /*coloca os botões no centro*/
+ top: 50%; /*define a altura da caixa completa*/
+ left: calc(50% + 120px); /*traz o container todo para direita*/
+ transform: translate(-50%, -50%);
+ position: absolute;
 }
 
 .caixaform{ 
   background-color: #FEADA6;
-  padding: 30px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  padding: 25px; 
   border-radius: 10px; /*arredonda as bordas*/
-  width: 500px; /*define o tamanho das caixas - comprimento*/
+  width: 450px; /*define o tamanho das caixas - comprimento*/
   height: auto; /*define o tamanho da caixa - altura */
   display: flex; /*define a distancias das caixas de dentro*/
   flex-direction: column; /*organiza em colunas*/
