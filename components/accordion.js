@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { useState } from 'react';
+import styles from './accordion.module.css';
 
-const Accordion = ({ titulo, itens, className }) => {
+
+const Accordion = ({ titulo, itens, className, icone }) => {
 
     const [exibirLista, setExibirLista] = useState(false);
 
@@ -17,11 +19,12 @@ const Accordion = ({ titulo, itens, className }) => {
             <p>{titulo}</p>
         </div>
         {exibirLista && <div>
-            <ul>
+            <div className={styles.accordionContainer}>
                 {itens.map((item, index) => (
-                <li key={index}>{item}</li>
+            <div key={index} className={styles.accordionItem}> {item} </div>
+
                 ))}
-            </ul>
+            </div>
         </div>}
     </div>
     );

@@ -1,0 +1,16 @@
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem { 
+  background-color: #FEADA6;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.accordionItem p {
+  padding: 12px;
+  margin-left: 50px;
+}
