@@ -21,7 +21,7 @@ export default async function MaterialPage() {
   return (
   <div className={styles.pageContainer}>
     <div className={styles.page}>
-      <Link href="/principal"> <Image src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.buttonVoltar}/></Link>
+      <Link href="/inicio"> <Image src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.buttonVoltar}/></Link>
       <Image src="/logo-original.svg" width={200} height={200} alt="Logo Estuda+" className={styles.logo}/>
     </div>
       <main className={styles.mainContent}>
