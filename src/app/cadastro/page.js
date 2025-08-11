@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { useState } from "react";
 
 
 export default function Home() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className={styles.page}>
 
@@ -32,9 +37,16 @@ export default function Home() {
     <div className={styles.email}>
       <Image className ={styles.caixaEmail} src="/email-cadastro.png" width="20" height="20" alt="Perfil"/>
       <input className={styles.input} type="email" placeholder="Email" /></div>
-    <div className={styles.senha}> 
+
+    <div className={styles.senha}>  
       <Image className ={styles.cadeadoSenha} src="/senha-cadastro.png" width="20" height="20" alt="Perfil"/>
-      <input className={styles.input} type="password" placeholder="Senha" /></div>
+      <input className={styles.input} type={showPassword ? "text" : "password"} placeholder="Senha" />
+        <span className={styles.visualizarSenha}
+          onClick={() => setShowPassword(!showPassword)}>
+        <Image src = {showPassword ? "/PermitirVisualizacao-cadastro.png" : "/BloquearVisualizacao-cadastro.png"} width={20} height={20} alt="Visualizar Senha"/>
+        </span>
+      </div>
+      
     
     <div className={styles.genero}>Gênero</div>
       <div className={styles.campoGenero}>

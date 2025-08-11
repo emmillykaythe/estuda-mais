@@ -80,45 +80,53 @@
 
 .opcaoGenero {
   background-color: #ffffff; 
-  padding: 10px 12px; /*1º valor define o tamanho da caixa (altura); 2º valor define a distancia da letra com o selecionar*/
+  padding: 10px 12px; 
   border-radius: 5px;
   display: flex;
-  justify-content: space-between; /* separa texto da seleção */
+  justify-content: space-between; 
   width: 100%; 
   font-size: 16px; 
 }
 
 .nome {
-  position: relative; /*faz com que o icone se posicione de acordo com o input */
+  position: relative; 
 }
 
 .perfil {
   position: absolute;
-  left: 15px; /*distancia do icone com a margem*/
+  left: 15px; 
   top: 50%;
   transform: translateY(-50%);
 }
 
 .email {
-  position: relative; /*faz com que o icone se posicione de acordo com o input */
+  position: relative; 
 }
 
 .caixaEmail {
   position: absolute;
-  left: 15px; /*distancia do icone com a margem*/
+  left: 15px; 
   top: 50%;
   transform: translateY(-50%);
 }
 
 .senha {
-  position: relative; /*faz com que o icone se posicione de acordo com o input */
+  position: relative; 
 }
 
 .cadeadoSenha {
   position: absolute;
-  left: 15px; /*distancia do icone com a margem*/
+  left: 15px; 
   top: 50%;
   transform: translateY(-50%);
+}
+
+.visualizarSenha {
+  position: absolute;
+  right: 10px; 
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer; 
 }
 
 .buttonVoltar {
