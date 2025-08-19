@@ -14,7 +14,10 @@ export default async function MaterialPage() {
 ];
 
   const conteudos = listaConteudos.map(item =>
-    <Accordion key={item.id} className={styles.subItemMaterial} titulo={`${item.nome}`} itens={["Link com o professor 1", "Link com o professor 2", "Link com o professor 3"]} />
+    <Accordion key={item.id} className={styles.subItemMaterial} titulo={<div className={styles.itemTitulo}> 
+    <Image src="/play-material.png" width={13} height={12} alt="Play" className={styles.play}/> <span>{item.nome}</span> </div>}
+    itens={["Link com o professor 1", "Link com o professor 2", "Link com o professor 3"]}
+     />
   )
 
   console.log(conteudos);
