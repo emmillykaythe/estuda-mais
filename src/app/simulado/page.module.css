@@ -1,0 +1,12 @@
+.logo {
+  width: 100%;
+  display: flex;
+  margin-top: -30px;
+}
+
+.buttonVoltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
