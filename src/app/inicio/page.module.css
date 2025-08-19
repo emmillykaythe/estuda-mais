@@ -15,7 +15,7 @@
   }
 
 .logo {
-  width: 60%; /* O logo ocupará 70% da largura da abaLateral */
+  width: 60%; 
   max-width: 200px; /* Um limite para não ficar gigante em telas muito grandes */
   height: auto;
 }
@@ -47,7 +47,7 @@
   width: 220px;
   padding-left: 25%;
   color:#000;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .divisao{
@@ -58,8 +58,8 @@
 
 .buttonVoltar {
   position: absolute;
-  top: 12px;
-  left: 23%;
+  top: 13px;
+  left: 22%;
   cursor: pointer;  
 }
 
