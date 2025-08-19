@@ -12,7 +12,7 @@ export default function Home() {
     </Link>
 
     <div className = {styles.abaLateral}>  
-      <Image className ={styles.logo} src="/logo-principal.svg" width="20" height="20" alt="Logo"/> 
+      <Image className ={styles.logo} src="/logo-original.svg" width="10" height="10" alt="Logo"/> 
 
     <div className={styles.inicioAcesso}> 
       <button className={styles.button}>
@@ -25,13 +25,13 @@ export default function Home() {
     </div>
 
     <div className= {styles.acessoRapido}>
-      <Link href = "/material" className={styles.button}> 
-     <Image className={styles.material} src ="/material-principal.png" width="25" height="25" alt="Material"></Image> 
-      <span>Materiais</span> </Link>
-
-        <button className={styles.button}> 
-          <Image className={styles.simulado} src ="/simulados-principal.png" width="20" height="23" alt="Simulados"></Image>
-        <span>Simulados</span> </button>
+  <Link href = "/material" className={styles.button}> 
+    <Image className={styles.material} src ="/material-principal.png" width="25" height="25" alt="Material"></Image> 
+    <span>Materiais</span> </Link>
+  <Link href="/simulado" className={styles.button}>
+    <Image className={styles.simulado} src="/simulados-principal.png" width="20" height="23" alt="Simulados"/>
+    <span>Simulados</span>
+  </Link>
     </div> 
     </div>
     <div className={styles.container}>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </Link>  
 
-     <Link href="/simulados" className={styles.caixa}>
+     <Link href="/simulado" className={styles.caixa}>
        <Image className={styles.simulado} src="/simulados-principal.png" width="120" height="120" alt="Simulados" />
        <div className={styles.texto}>
      <h2>Simulados</h2>
