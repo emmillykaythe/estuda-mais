@@ -15,7 +15,7 @@ export default function Home() {
       <input className={styles.input} type="password" placeholder="Digite sua senha" />
   </div>
         
-        <Link href ='/principal' className={styles.button}> ENTRAR </Link>
+        <Link href ='/inicio' className={styles.button}> ENTRAR </Link>
         <Link href ='/cadastro' className={styles.button}> CADASTRE-SE </Link>
   </div>
   </div>
