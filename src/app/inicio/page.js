@@ -34,8 +34,8 @@ export default function Home() {
   </Link>
     </div> 
     </div>
-    <div className={styles.container}>
 
+    <div className={styles.container}>
       <Link href = "/material" className={styles.caixa}>
         <Image className={styles.material} src ="/material-principal.png" width="110" height="110" alt="Material"/>
         <div className={styles.texto}>

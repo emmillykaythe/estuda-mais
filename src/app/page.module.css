@@ -47,7 +47,6 @@
  gap: 28px; /*define a distancia das caixas*/   
 }
 
-
 .input {
  padding: 10px; /*define o tamanho das caixas - altura*/
  border: none; /*remove a borda*/
@@ -78,7 +77,7 @@
  object-fit: contain; /*ajusta a imagem de acordo como ta la no page.js*/
 }
 
-.visualizarSenha { 
+.visualizarSenha {  
   cursor: pointer;
   position: absolute;
   left: 82%;
