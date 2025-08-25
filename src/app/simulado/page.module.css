@@ -1,12 +1,68 @@
-.logo {
-  width: 100%;
+.page {
   display: flex;
-  margin-top: -30px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .buttonVoltar {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   cursor: pointer;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px; /*preciso ajeitar isso aqui*/
+}
+
+.caixa {
+  background-color: #FEADA6;
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 320px;
+  }
+
+.organizacao {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; 
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject {
+  margin: 0 !important; /*precisei forçar a margem para que os assuntos ficassem abaixo do assunto principal*/
+  font-size: 11px;
+}
+
+.organizacao h3 {
+  margin-top: 10px;
+  font-weight: normal; 
+  font-size: 16px;
+  flex-direction: column;
+}
+
+.caixa p {
+  margin-top: 19px;
+}
+
+.botaoIniciar {
+  background-color: #FEDBD8;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 1rem; /*ajusto tanto o width quanto o height do botão de uma vez só*/
+  font-size: 15px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
