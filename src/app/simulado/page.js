@@ -3,30 +3,29 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 const dados = [
-  { title: "Enem - Conjuntos", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Funções", subject: "Afim, quadrática, modular e exponencial", description: "45 questões de matemática e suas tecnologias"},
-  { title: "Enem - Sequências numéricas", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Função logarítmica", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Trigonometria", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Matrizes", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Sistemas Lineares", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Geometria", subject: "Plana e Espacial", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Análise combinatória", subject: "Probabilidade e Tratamento de informação", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Matemática Financeira", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Estatísticas Básicas", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Geometria Analítica", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Circunferência", description: "45 questões de matemática e suas tecnologias" },
-  { title: "Enem - Crônicas", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2011", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2012", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2013", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2014", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2015", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2016", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2017", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2018", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2019", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2020", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2021", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2022", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2023", description: "45 questões de matemática e suas tecnologias" },
+  { title: "Simulado - Enem 2024", description: "45 questões de matemática e suas tecnologias" },
 ];
 
-function Assuntos({ title, subject, description }) {
+function Assuntos({ title, description }) {
   return (
     <div className={styles.caixa}>  
       <div className={styles.organizacao}>
         <Image className={styles.grafico} src="/grafico-simulado.png" width="30" height="30" alt="Gráfico"/>
         <div className={styles.textos}>
           <h3>{title}</h3>
-          <p className={styles.subject}> {subject}</p>
         </div>
       </div>
       <p>{description}</p>
@@ -46,7 +45,7 @@ export default function Home() {
           <Image className={styles.logo} src="/logo-original.svg" width="150" height="150" alt="Logo" />
       <div className={styles.container}>
         {dados.map((assuntos, index) => (
-          <Assuntos key={index} title={assuntos.title} subject={assuntos.subject} description={assuntos.description} />
+          <Assuntos key={index} title={assuntos.title} description={assuntos.description} />
         ))}
       </div>
     </div>
