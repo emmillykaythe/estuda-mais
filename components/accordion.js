@@ -21,7 +21,7 @@ const Accordion = ({ titulo, itens, className, icone }) => {
         {exibirLista && <div>
             <div className={styles.accordionContainer}>
                 {itens.map((item, index) => (
-            <div key={index} className={styles.accordionItem}> {item} </div>
+            <div key={index} className={styles.accordionItem}> <div className = {styles.links} >{item} </div> </div>
 
                 ))}
             </div>

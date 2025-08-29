@@ -12,5 +12,12 @@
 
 .accordionItem p {
   padding: 12px;
-  margin-left: 50px;
+  color: black;
+}
+
+.links {
+  color: blue;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
