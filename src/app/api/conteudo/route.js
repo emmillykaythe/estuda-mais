@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   try {
-    const result = await db.query('SELECT * FROM tipo')
+    const result = await db.query('SELECT * FROM conteudo')
     return NextResponse.json(result.rows)
   } catch (error) {
     console.error('Erro listando alunos:', error)

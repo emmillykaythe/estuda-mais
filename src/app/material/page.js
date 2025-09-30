@@ -5,22 +5,25 @@ import db from "@/lib/db";
 import Accordion from "@components/accordion";
 
 export default async function MaterialPage() {
-  const materiais = await db.query("select * from material");
+  const conteudos = await db.query("select * from conteudo");
 
-  const listaConteudos = [
-  { id: 1, nome: 'Vídeo aulas' },
-  { id: 2, nome: 'Resumos' },
-  { id: 3, nome: 'Listas de exercícios' },
-];
+  const tipos = (await db.query('SELECT * FROM tipo')).rows;
 
-  const conteudos = listaConteudos.map(item =>
-    <Accordion key={item.id} className={styles.subItemMaterial} titulo={ <span className={styles.itemTitulo}> 
-    <Image src="/play-material.png" width={13} height={12} alt="Play" className={styles.play}/> <span>{item.nome}</span> </span>}
-    itens={["Link com o professor 1", "Link com o professor 2", "Link com o professor 3"]}
-     />
-  )
+  const materiais = await db.query('SELECT * FROM material');
 
-  console.log(conteudos);
+
+  const filtrarMateriaisPorTipo = (idConteudo, idTipo) => {
+    const materiaisFiltrado = materiais.rows.filter(m => m.idconteudo == idConteudo && m.idtipo == idTipo);
+    console.log(materiais.rows, idConteudo, idTipo, materiaisFiltrado);
+    return materiaisFiltrado;
+  }
+  const tiposComponentes = (idConteudo) => (tipos.map(tipo => (
+    <Accordion key={tipo.id} className={styles.subItemMaterial} titulo={ <span className={styles.itemTitulo}> 
+    <Image src="/play-material.png" width={13} height={12} alt="Play" className={styles.play}/> <span>{tipo.nome}</span> </span>}
+    itens={filtrarMateriaisPorTipo(idConteudo, tipo.id).map(m => <a href={m.link} target="_blank">{m.descricao}</a>)}
+     />))
+  );
+
   return (
   <div className={styles.pageContainer}>
     <div className={styles.page}>
@@ -29,8 +32,8 @@ export default async function MaterialPage() {
     </div>
       <main className={styles.mainContent}>
         <div className={styles.listaMateriais}>
-          {materiais.rows.map((material, index) => (
-              <Accordion key={material.id} className={styles.itemMaterial} titulo={`${index + 1}. ${material.nome}`} itens={conteudos} />
+          {conteudos.rows.map((conteudo, index) => (
+              <Accordion key={conteudo.id} className={styles.itemMaterial} titulo={`${index + 1}. ${conteudo.nome}`} itens={tiposComponentes(conteudo.id)} />
           ))}
         </div>
       </main>
