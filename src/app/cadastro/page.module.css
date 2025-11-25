@@ -1,3 +1,9 @@
+.page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
 .abaLateral {
   position: fixed;
   top: 0;
@@ -6,63 +12,97 @@
   height: 100vh;
   background-color: #FEADA6;
   display: flex;
-  justify-content: center; 
-  align-items: center;  
-  }
+  justify-content: center;
+  align-items: center;
+}
 
 .logo {
-  filter: sepia(); 
-  height: auto;
-  display: block;
+  filter: sepia();
   width: 180px;
 }
 
 .container {
- display: flex;  /*define a distancias das caixas de dentro*/
- flex-direction: column; /*organiza em colunas*/
- align-items: center; /*coloca os botões no centro*/
- top: 50%; /*define a altura da caixa completa*/
- left: calc(50% + 120px); /*traz o container todo para direita*/
- transform: translate(-50%, -50%);
- position: absolute;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 10vw);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
-.caixaform{ 
+.mensagemErro, .mensagemSucesso {
+  width: 450px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 300;
+}
+
+.mensagemErro {
+  background: #ff0000;
+  color: white;
+}
+
+.mensagemSucesso {
+  background: #37a33a;
+  color: white;
+}
+
+.caixaform {
   background-color: #FEADA6;
-  padding: 25px; 
-  border-radius: 10px; /*arredonda as bordas*/
-  width: 450px; /*define o tamanho das caixas - comprimento*/
-  height: auto; /*define o tamanho da caixa - altura */
-  display: flex; /*define a distancias das caixas de dentro*/
-  flex-direction: column; /*organiza em colunas*/
-  gap: 28px; /*define a distancia das caixas*/    
+  padding: 25px;
+  border-radius: 10px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .input {
-  padding: 10px; /*define o tamanho das caixas - altura*/
-  border: none; /*remove a borda*/
-  border-radius: 5px; /*arredonda as bordas*/
-  font-size: 14px; /*tamanho do texto*/
-  width: 100%; /*define o tamanho das caixas - comprimento*/
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
   padding-left: 45px;
+  font-size: 14px;
 }
 
 .button {
   background-color: #fffffff8;
-  border: none; /*remove a borda*/ 
-  border-radius: 5px; /*arredonda as bordas*/
-  font-weight: bold; /*deixa em negrito*/
-  padding: 12px ; /*define o tamanho da caixa - altura*/
-  width: 158px; /*define o tamanho da caixa - comprimento*/
-  margin: 0 auto; /*centraliza o botão no meio*/
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 12px;
+  width: 158px;
   font-size: 16px;
-  display: block;
+  margin: 0 auto;
   text-decoration: none;
-  color: #000; 
+  color: #000;
   text-align: center;
 }
 
-.campoData{
+.nome, .email, .senha {
+  position: relative;
+}
+
+.perfil, .caixaEmail, .cadeadoSenha {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.visualizarSenha {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.campoData {
   position: relative;
 }
 
@@ -74,71 +114,23 @@
 }
 
 .campoGenero {
-  display: flex; /*coloca as opções lado a lado*/
-  gap: 40px; /*distância entre as opções*/
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .opcaoGenero {
-  background-color: #ffffff; 
-  padding: 10px 12px; 
+  background-color: white;
+  padding: 10px 12px;
   border-radius: 5px;
+  width: 100%;
   display: flex;
-  justify-content: space-between; 
-  width: 100%; 
-  font-size: 16px; 
-}
-
-.nome {
-  position: relative; 
-}
-
-.perfil {
-  position: absolute;
-  left: 15px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.email {
-  position: relative; 
-}
-
-.caixaEmail {
-  position: absolute;
-  left: 15px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.senha {
-  position: relative; 
-}
-
-.cadeadoSenha {
-  position: absolute;
-  left: 15px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.visualizarSenha {
-  position: absolute;
-  right: 10px; 
-  top: 60%;
-  transform: translateY(-50%);
-  cursor: pointer; 
+  justify-content: space-between;
 }
 
 .buttonVoltar {
   position: absolute;
   top: 10px;
   left: 21%;
-  cursor: pointer;  
-}
-
-@media (max-width: 1199px) {
-  .logo {
-    width: 110%;
-    max-width: 320px;  
-  }
+  cursor: pointer;
 }
