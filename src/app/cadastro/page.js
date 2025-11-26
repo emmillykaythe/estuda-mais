@@ -42,7 +42,7 @@ export default function CadastroPage() {
         setTipoMensagem("sucesso");
         setMensagem(data.message);
         setMostrarMensagem(true);
-        setTimeout(() => (window.location.href = "/inicio"), 1500);
+        setTimeout(() => (window.location.href = "/inicio"), 1000);
       } else {
         setTipoMensagem("erro");
         setMensagem(data.error || "Erro ao cadastrar");
@@ -63,7 +63,7 @@ export default function CadastroPage() {
       </Link>
 
       <div className={styles.abaLateral}>
-        <Image className={styles.logo} src="/logo-apresentação.png" width="90" height="90" alt="Logo"/>
+        <Image className={styles.logo} src="/logo-apresentação.png" width="70" height="70" alt="Logo"/>
       </div>
 
       <div className={styles.container}>

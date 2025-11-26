@@ -18,7 +18,7 @@
 
 .logo {
   filter: sepia();
-  width: 180px;
+  width: 150px;
 }
 
 .container {
@@ -30,24 +30,6 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
-}
-
-.mensagemErro, .mensagemSucesso {
-  width: 450px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: 300;
-}
-
-.mensagemErro {
-  background: #ff0000;
-  color: white;
-}
-
-.mensagemSucesso {
-  background: #37a33a;
-  color: white;
 }
 
 .caixaform {
@@ -133,4 +115,24 @@
   top: 10px;
   left: 21%;
   cursor: pointer;
+}
+
+.mensagemErro, .mensagemSucesso {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 300;
+  top: 60%;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.75);
+}
+
+.mensagemErro {
+  background-color: rgb(252, 122, 122);
+  color: #000000; 
+}
+
+.mensagemSucesso {
+  background-color: #86ddb1;
+  color: rgb(0, 0, 0);
 }
