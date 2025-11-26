@@ -6,26 +6,26 @@ export async function POST(req) {
   try {
     const { email, senha } = await req.json();
 
-    if (!email || !senha) {
+    if (!email || !senha) { //faltando campos
       return NextResponse.json(
         { error: "Por favor, preencha todos os campos." },
         { status: 400 }
       );
     }
 
-    if (!/\S+@\S+\.\S+/.test(email)) {
+    if (!/\S+@\S+\.\S+/.test(email)) { //texto @ texto . texto
       return NextResponse.json(
         { error: "Formato de e-mail inválido." },
         { status: 400 }
       );
     }
 
-    const result = await db.query(
+    const result = await db.query( 
       "SELECT id, nome, email, senha_hash FROM aluno WHERE email = $1",
       [email]
     );
  
-    if (result.rowCount === 0) {
+    if (result.rowCount === 0) { // aluno não encontrado
       return NextResponse.json(
         { error: "Email ou senha inválidos." },
         { status: 401 }

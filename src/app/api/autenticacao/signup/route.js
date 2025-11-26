@@ -21,7 +21,7 @@ export async function POST(request) {
       [email]
     );
 
-    if (existe.rowCount > 0) {
+    if (existe.rowCount > 0) {  
       client.release();
       return NextResponse.json(
         { error: "A conta já existe!" },

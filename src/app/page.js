@@ -36,7 +36,7 @@ export default function Home() {
 
       if (!res.ok) {
         setTipoMensagem("erro");
-        setMensagem(data.error || "Email ou senha inválidos.");
+        setMensagem(data.error || "Credenciais inválidos.");
         setMostrarMensagem(true);
         return;
       }
@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-
+      
       <div className={styles.abaLateral}>
         <Image className={styles.logo} src="/logo-apresentação.png" width="150" height="150" alt="Logo" />
       </div>
