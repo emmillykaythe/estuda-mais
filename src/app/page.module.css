@@ -57,19 +57,21 @@
  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377); /*adiciona um sombreamento no texto*/
 }
 
-.button {
- margin-top: 19px; /*distancia do botão*/
+.botaoGoogle, .button {
+ margin-top: 12px; /*distancia do botão*/
  background-color: #FEADA6;
  border: none; /*remove a borda*/
  padding: 8px; /*define o tamanho das caixas - altura */
- width: 150px; /*define o tamanho das caixas - comprimento*/
+ width: 170px; /*define o tamanho das caixas - comprimento*/
  border-radius: 5px; /*arredonda as bordas*/
  cursor: pointer;
  text-align: center;
  color: #000;
  text-decoration: none; /*remove o sublinhado do link*/
- font-size: 14px;
+ font-size: 13px;
 }
+
+
 
 .usuario{
  transform: translateY(45%); /*alinha ele em cima do container*/

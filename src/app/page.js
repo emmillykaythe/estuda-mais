@@ -1,9 +1,10 @@
 'use client'
 
 import Image from "next/image";
-import styles from "./page.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import { signIn } from "next-auth/react";   // Necessário para login com Google
+import styles from "./page.module.css";      // Suas classes CSS
 
 export default function Home() {
 
@@ -81,6 +82,7 @@ export default function Home() {
           </div>
         </div>
 
+        <button onClick={() => signIn("google")} className={styles.botaoGoogle}> CONTINUAR COM O GOOGLE </button>
         <button className={styles.button} onClick={fazerLogin}> ENTRAR </button>
         <Link href='/cadastro' className={styles.button}> CADASTRE-SE </Link>
 
