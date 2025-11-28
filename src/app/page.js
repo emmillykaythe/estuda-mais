@@ -82,7 +82,13 @@ export default function Home() {
           </div>
         </div>
 
-        <button onClick={() => signIn("google")} className={styles.botaoGoogle}> CONTINUAR COM O GOOGLE </button>
+        <button 
+        onClick={() => signIn("google", { callbackUrl: "/inicio" })} 
+        className={styles.botaoGoogle}
+      >
+        CONTINUAR COM O GOOGLE
+      </button>
+
         <button className={styles.button} onClick={fazerLogin}> ENTRAR </button>
         <Link href='/cadastro' className={styles.button}> CADASTRE-SE </Link>
 
