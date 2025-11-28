@@ -12,90 +12,97 @@
   left: 0;
   width: 20vw;
   height: 100vh;
-  background-color: #FEADA6;
+  background-color: #feada6;
   display: flex;
-  justify-content: center; 
-  align-items: center;  
-  }
+  justify-content: center;
+  align-items: center;
+}
 
 .logo {
-  filter: sepia(); 
+  filter: sepia();
   height: auto;
   display: block;
   max-width: 100%;
 }
 
 .container {
- display: flex;  /*define a distancias das caixas de dentro*/
- flex-direction: column; /*organiza em colunas*/
- align-items: center; /*coloca os botões no centro*/
- top: 45%; /*define a altura da caixa completa*/
- left: calc(50% + 120px); /*traz o container todo para direita*/
- transform: translate(-50%, -50%);
- position: absolute;
+  display: flex; /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  align-items: center; /*coloca os botões no centro*/
+  top: 45%; /*define a altura da caixa completa*/
+  left: calc(50% + 120px); /*traz o container todo para direita*/
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
-.caixaform{
- background-color: #FEADA6;
- padding: 50px 15px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
- border-radius: 10px; /*arredonda as bordas*/
- width: 320px; /*define o tamanho das caixas - comprimento*/
- height: 290px; /*define o tamanho da caixa - altura */
- display: flex; /*define a distancias das caixas de dentro*/
- flex-direction: column; /*organiza em colunas*/
- justify-content: center; /*coloca as caixas no centro*/
- gap: 28px; /*define a distancia das caixas*/   
+.caixaform {
+  background-color: #feada6;
+  padding: 50px 15px 15px; /*1º valor = cima; 2º valor = tamanho na direita e na esquerda; 3º valor = tamanho de baixo para cima*/
+  border-radius: 10px; /*arredonda as bordas*/
+  width: 320px; /*define o tamanho das caixas - comprimento*/
+  height: 290px; /*define o tamanho da caixa - altura */
+  display: flex; /*define a distancias das caixas de dentro*/
+  flex-direction: column; /*organiza em colunas*/
+  justify-content: center; /*coloca as caixas no centro*/
+  gap: 28px; /*define a distancia das caixas*/
 }
 
 .input {
- padding: 10px; /*define o tamanho das caixas - altura*/
- border: none; /*remove a borda*/
- border-radius: 5px; /*arredonda as bordas*/
- font-size: 14px; /*tamanho do texto*/
- width: 100%;  /*define o tamanho das caixas - comprimento*/
- text-align: center; /*coloca o texto no centro*/
- text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377); /*adiciona um sombreamento no texto*/
+  padding: 10px; /*define o tamanho das caixas - altura*/
+  border: none; /*remove a borda*/
+  border-radius: 5px; /*arredonda as bordas*/
+  font-size: 14px; /*tamanho do texto*/
+  width: 100%; /*define o tamanho das caixas - comprimento*/
+  text-align: center; /*coloca o texto no centro*/
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377); /*adiciona um sombreamento no texto*/
 }
 
-.botaoGoogle, .button {
- margin-top: 12px; /*distancia do botão*/
- background-color: #FEADA6;
- border: none; /*remove a borda*/
- padding: 8px; /*define o tamanho das caixas - altura */
- width: 170px; /*define o tamanho das caixas - comprimento*/
- border-radius: 5px; /*arredonda as bordas*/
- cursor: pointer;
- text-align: center;
- color: #000;
- text-decoration: none; /*remove o sublinhado do link*/
- font-size: 13px;
+.button {
+  margin-top: 12px; /*distancia do botão*/
+  background-color: #feada6;
+  border: none; /*remove a borda*/
+  padding: 8px; /*define o tamanho das caixas - altura */
+  width: 170px; /*define o tamanho das caixas - comprimento*/
+  border-radius: 5px; /*arredonda as bordas*/
+  cursor: pointer;
+  text-align: center;
+  color: #000;
+  text-decoration: none; /*remove o sublinhado do link*/
+  font-size: 13px;
+  margin-right: 70px;
 }
 
+.botaoGoogle {
+  background-color: #ffffff;
+  border: none;
+  margin-left: 50%;
+  margin-top: -8%;
+}
 
-
-.usuario{
- transform: translateY(45%); /*alinha ele em cima do container*/
- object-fit: contain; /*ajusta a imagem de acordo como ta la no page.js*/
+.usuario {
+  transform: translateY(45%); /*alinha ele em cima do container*/
+  object-fit: contain; /*ajusta a imagem de acordo como ta la no page.js*/
 }
 
 .senha {
-  position: relative; 
+  position: relative;
   width: 100%;
 }
 
-.visualizarSenha {  
+.visualizarSenha {
   cursor: pointer;
   position: absolute;
-  right: 10px;   
-  top: 50%;      
+  right: 10px;
+  top: 50%;
   transform: translateY(-50%);
 }
 
-.mensagemErro, .mensagemSucesso {
+.mensagemErro,
+.mensagemSucesso {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.70);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
 .mensagemErro {
@@ -106,4 +113,12 @@
 .mensagemSucesso {
   background-color: #86ddb1;
   color: rgb(0, 0, 0);
+}
+
+.linhaDivisao {
+  transform: rotate(90deg);
+  width: 46%; /* ajuste conforme necessário */
+  height: 40px; /* ajusta para ficar mais alta */
+  margin-left: 35%;
+  margin-top: -16%;
 }
