@@ -11,7 +11,7 @@ export async function POST(request) {
 
     if (!nome || !email || !senha || !genero || !data_nascimento) {
       return NextResponse.json(
-        { error: "Credenciais inválidos." },
+        { error: "Preencha todos os campos." },
         { status: 400 }
       );
     }
