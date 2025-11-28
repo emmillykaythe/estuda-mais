@@ -1,4 +1,4 @@
-import db from "@/lib/db";
+import db from "@/lib/db";        
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
@@ -7,9 +7,11 @@ export async function POST(request) {
     const { nome, email, senha, genero, data_nascimento, role = "aluno" } =
       await request.json();
 
-    if (!nome || !email || !senha) {
+    console.log("Recebi do frontend:", nome, email, senha, genero, data_nascimento);
+
+    if (!nome || !email || !senha || !genero || !data_nascimento) {
       return NextResponse.json(
-        { error: "Preencha todos os campos!" },
+        { error: "Credenciais inválidos." },
         { status: 400 }
       );
     }
@@ -21,10 +23,10 @@ export async function POST(request) {
       [email]
     );
 
-    if (existe.rowCount > 0) {  
+    if (existe.rowCount > 0) {
       client.release();
       return NextResponse.json(
-        { error: "A conta já existe!" },
+        { error: "E-mail já cadastrado." },
         { status: 409 }
       );
     }
@@ -34,21 +36,38 @@ export async function POST(request) {
     await client.query(
       `INSERT INTO aluno 
         (nome, email, senha_hash, genero, data_nascimento, role)
-       VALUES ($1, $2, $3, $4, $5, $6)
-      `,
+       VALUES ($1, $2, $3, $4, $5, $6)`,
       [nome, email, senhaHash, genero, data_nascimento, role]
     );
 
-    client.release();
+    client.release(); // a conexão volta para o db, fica livre para outros usos
 
     return NextResponse.json(
-      { message: "Cadastro realizado com sucesso!" },
+      { message: "Usuário criado com sucesso!" },
       { status: 201 }
     );
+
   } catch (error) {
-    console.error("Erro no cadastro:", error);
+    console.error("Erro ao criar aluno:", error.message, error.stack);
     return NextResponse.json(
       { error: "Erro interno no servidor." },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const client = await db.connect();
+    const result = await client.query("SELECT * FROM aluno");
+    client.release();
+
+    return NextResponse.json(result.rows);
+
+  } catch (error) {
+    console.error("Erro listando alunos:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
