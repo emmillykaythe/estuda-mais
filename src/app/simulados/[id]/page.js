@@ -1,5 +1,6 @@
 import db from "@/lib/db";
-import SimuladoClient from "./simulado-client";
+import SimuladoClient from "./simulado-cliente";
+import styles from "../page.module.css";
 
 export default async function SimuladoPage({ params }) {
   const { id } = params; 
@@ -34,4 +35,5 @@ export default async function SimuladoPage({ params }) {
   return (
     <SimuladoClient simulado={simulado} questoes={questoes} simuladoId={id} />
   );
+
 }

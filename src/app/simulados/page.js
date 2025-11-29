@@ -6,7 +6,8 @@ import Link from "next/link";
 function Assuntos({ id, title, description }) {
   return (
     <div className={styles.caixa}>
-      <div>
+      <div className={styles.cabecalho}>
+        <img className ={styles.grafico} src="/grafico-simulado.png" width="25" height="25" alt="Gráfico de simulados"/> 
         <h3>{title}</h3>
       </div>
       <p>
@@ -25,13 +26,15 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
+      <Link href="/inicio"> <Image src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.botaoVoltar}/></Link>
+      <img className ={styles.logo} src="/logo-original.svg" width="170" height="170" alt="Logo"/> 
       <div className={styles.container}>
-        {dados.map((simulado) => (
+        {dados.map((simulados) => (
           <Assuntos 
-            key={simulado.id}
-            id={simulado.id}          
-            title={simulado.title}
-            description={simulado.description}
+            key={simulados.id}
+            id={simulados.id}          
+            title={simulados.title}
+            description={simulados.description}
           />
         ))}
       </div>

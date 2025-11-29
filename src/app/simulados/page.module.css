@@ -4,15 +4,29 @@
   align-items: flex-start;
 }
 
-.logo {
-  margin: 0 auto;
-}
-
-.buttonVoltar {
+.botaoVoltar {
   position: absolute;
   top: 20px;
   left: 20px;
   cursor: pointer;
+}
+
+.grafico{
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 6px;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -3px;
+}
+
+.logo{
+  display: block;
+  margin: 20px auto;
 }
 
 .container {
@@ -33,31 +47,9 @@
   flex-basis: 320px;
 }
 
-.organizacao {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.textos {
-  display: flex;
-  flex-direction: column;
-}
-
-.subject {
-  margin: 0 !important; 
-  font-size: 11px;
-}
-
-.organizacao h3 {
-  margin-top: 10px;
-  font-weight: normal;
-  font-size: 16px;
-  flex-direction: column;
-}
-
 .caixa p {
   margin-top: 19px;
+  font-size: 17px;
 }
 
 .botaoIniciar {
@@ -67,12 +59,7 @@
   padding: 0.3rem 1rem; 
   font-size: 15px;
   cursor: pointer;
+  margin-top: 6px;
+  margin-left: 70%;
 }
 
-.buttonSemEstilo {
-  align-self: flex-end;
-}
-
-.marcada {
-  color: blue;
-}
