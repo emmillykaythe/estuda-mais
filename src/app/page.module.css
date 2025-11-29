@@ -77,6 +77,8 @@
   border: none;
   margin-left: 50%;
   margin-top: -8%;
+  cursor: pointer;
+
 }
 
 .usuario {

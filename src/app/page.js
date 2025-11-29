@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "next-auth/react"; // Necessário para login com Google
-import styles from "./page.module.css"; // Suas classes CSS
+import styles from "./page.module.css"; 
 
 export default function Home() {
   const [form, setForm] = useState({
@@ -38,7 +38,7 @@ export default function Home() {
         setTipoMensagem("erro");
         setMensagem(data.error || "Credenciais inválidos.");
         setMostrarMensagem(true);
-        return;
+      return;
       }
 
       setTipoMensagem("sucesso");
@@ -59,39 +59,19 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.abaLateral}>
-        <Image
-          className={styles.logo}
-          src="/logo-apresentação.png"
-          width="150"
-          height="150"
-          alt="Logo"
-        />
+        <Image className={styles.logo} src="/logo-apresentação.png" width="150" height="150" alt="Logo"/>
       </div>
 
       <div className={styles.container}>
-        {mostrarMensagem && (
-          <div
-            className={
-              tipoMensagem === "erro"
-                ? styles.mensagemErro
-                : styles.mensagemSucesso
-            }
-          >
-            {" "}
-            {mensagem}
+        {mostrarMensagem && ( <div
+            className={ tipoMensagem === "erro" ? styles.mensagemErro : styles.mensagemSucesso}> {mensagem}
           </div>
         )}
 
-        <Image
-          className={styles.usuario}
-          src="/usuario-login.png"
-          width="370"
-          height="200"
-          alt="usuario"
-        />
+        <Image className={styles.usuario} src="/usuario-login.png" width="370" height="200" alt="usuario"/>
+        
         <div className={styles.caixaform}>
-          <input
-            className={styles.input}
+          <input className={styles.input}
             type="email"
             name="email"
             placeholder="Digite seu email"
@@ -108,16 +88,9 @@ export default function Home() {
               value={form.senha}
               onChange={handleChange}
             />
-            <span
-              className={styles.visualizarSenha}
-              onClick={() => setShowPassword(!showPassword)}
-            >
+            <span className={styles.visualizarSenha} onClick={() => setShowPassword(!showPassword)}>
               <Image
-                src={
-                  showPassword
-                    ? "/PermitirVisualizacao-cadastro.png"
-                    : "/BloquearVisualizacao-cadastro.png"
-                }
+                src={showPassword ? "/PermitirVisualizacao-cadastro.png" : "/BloquearVisualizacao-cadastro.png"}
                 width={20}
                 height={20}
                 alt="Visualizar Senha"
@@ -126,29 +99,16 @@ export default function Home() {
           </div>
         </div>
 
-        <button className={styles.button} onClick={fazerLogin}>
-          {" "}
-          ENTRAR{" "}
-        </button>
+        <button className={styles.button} onClick={fazerLogin}> ENTRAR </button>
 
-        <Link href="/cadastro" className={styles.button}>
-          {" "}
-          CADASTRE-SE{" "}
-        </Link>
-        <Image
-          className={styles.linhaDivisao}
-          src="/divisao-principal.png"
-          width={350}
-          height={55}
-          alt="Linha de divisão"
-        />
+        <Link href="/cadastro" className={styles.button}> CADASTRE-SE </Link>
 
-        <button
-          onClick={() => signIn("google", { callbackUrl: "/inicio" })}
-          className={styles.botaoGoogle}
-        >
+        <Image className={styles.linhaDivisao} src="/divisao-principal.png" width={350} height={55} alt="Linha de divisão"/>
+
+        <button onClick={() => signIn("google", { callbackUrl: "/inicio" })} className={styles.botaoGoogle} >
           <Image src="/google_login.png" width={22} height={22} alt="Google" />
         </button>
+        
       </div>
     </div>
   );
