@@ -57,21 +57,41 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
  
   if (finalizou) {
     return (
-      <div className={styles.resultadoContainer}>
-        <h1 className={styles.tituloResultado}>{simulado?.title}</h1>
+     <div className={styles.resultadoContainer}>
+  <h1 className={styles.tituloResultado}>{simulado?.title}</h1>
 
-        {respostas.map((r, i) => (
-          <div key={i}
-            className={`${styles.resultadoItem} ${
-              r.acertou ? styles.certo : styles.errado
-            }`}
-          >
-            <strong>Questão {i + 1}:</strong>{" "}
-            {getQuestao(r.id).alternativas[r.resposta]}
-            <span> — {r.acertou ? "✔ Acertou" : "✘ Errou"}</span>
-          </div>
-        ))}
+  <div className={styles.resumoResultado}>
+    <p>Total de questões: {questoes.length}</p>
+    <p>Acertos: {respostas.filter((r) => r.acertou).length}</p>
+    <p>Erros: {respostas.filter((r) => !r.acertou).length}</p>
+  </div>
+
+  <div className={styles.listagemResultados}>
+    {respostas.map((r, i) => (
+      <div
+        key={i}
+        className={`${styles.resultadoItem} ${
+          r.acertou ? styles.certo : styles.errado
+        }`}
+      >
+        <div className={styles.resultadoHeader}>
+          <strong>Questão {i + 1}</strong>
+          <span>{r.acertou ? "✔ Acertou" : "✘ Errou"}</span>
+        </div>
+
+        <p className={styles.minhaResposta}>
+          Sua resposta: {getQuestao(r.id).alternativas[r.resposta]}
+        </p>
+
+        {!r.acertou && (
+          <p className={styles.respostaCorreta}>
+            Correta: {getQuestao(r.id).alternativas[getQuestao(r.id).correta]}
+          </p>
+        )}
       </div>
+    ))}
+  </div>
+</div>
     );
   }
 

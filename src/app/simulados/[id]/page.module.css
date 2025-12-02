@@ -100,3 +100,59 @@
   background: #FECBC3;
   cursor: not-allowed;
 }
+
+.resultadoContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tituloResultado {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.resumoResultado {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.listagemResultados {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resultadoItem {
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.certo {
+  background-color: #e8f8e8;
+  border-left: 6px solid #2ecc71;
+}
+
+.errado {
+  background-color: #fdeaea;
+  border-left: 6px solid #e74c3c;
+}
+
+.resultadoHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.minhaResposta {
+  margin-bottom: 0.3rem;
+  margin-bottom: 10px;
+}
+
+
