@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import styles from "./page.module.css";
+import CronometroSidebar from "@components/CronometroSidebar";
 
 export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   const params = useParams();
@@ -85,7 +86,7 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
 
         {!r.acertou && (
           <p className={styles.respostaCorreta}>
-            Correta: {getQuestao(r.id).alternativas[getQuestao(r.id).correta]}
+            Correta: {getQuestao(r.id).alternativas[getQuestao(r.id).correta - 1]}
           </p>
         )}
       </div>
@@ -97,6 +98,9 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
 
   return (
     <>
+    <CronometroSidebar />
+    <div style={{ marginLeft: "18vw" }}>
+
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.label}>Questão</span>
@@ -151,6 +155,7 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
             </div>
           </div>
         )}
+      </div>
       </div>
     </>
   );

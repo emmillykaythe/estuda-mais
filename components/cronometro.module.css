@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150%;
+  max-width: 350px; 
+  min-width: 280px;
+  height: 100%;
+  background-color: #FEADA6;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding-top: 50px; 
+  gap: 50px;
+}
+
+.titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 25%;
+}
+
+.tempo {
+  font-size: 28px;
+  font-weight: bold;
+  background: #ffffff49;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
