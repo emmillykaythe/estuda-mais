@@ -27,6 +27,7 @@ export default async function SimuladoPage({ params }) {
         questao.alternativa2,
         questao.alternativa3,
         questao.alternativa4,
+        questao.alternativa5,
       ],
     });
   }
