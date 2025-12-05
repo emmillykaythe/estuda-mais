@@ -14,7 +14,6 @@ export default async function MaterialPage() {
 
   const filtrarMateriaisPorTipo = (idConteudo, idTipo) => {
     const materiaisFiltrado = materiais.rows.filter(m => m.idconteudo == idConteudo && m.idtipo == idTipo);
-    console.log(materiais.rows, idConteudo, idTipo, materiaisFiltrado);
     return materiaisFiltrado;
   }
   const tiposComponentes = (idConteudo) => (tipos.map(tipo => (
