@@ -31,7 +31,7 @@ export default function CronometroSidebar() {
   const formatar = (num) => String(num).padStart(2, "0");
 
   return (
-    <div className={styles.sidebar}>
+    <div className={styles.abaLateral}>
       <h2 className={styles.titulo}>Tempo de Simulado</h2>
 
       <div className={styles.tempo}>
