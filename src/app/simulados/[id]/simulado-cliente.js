@@ -45,24 +45,25 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   };
 
   const responder = (questao, resposta) => {
-    let nova = {
-      id: questao.id,
-      resposta: resposta,
-      acertou: resposta === questao.correta,
-    };
-
-    setRespostas((prev) => {
-      const idx = prev.findIndex((r) => r.id === questao.id);
-      if (idx >= 0) {
-        const copia = [...prev];
-        copia[idx] = nova;
-        return copia;
-      }
-      return [...prev, nova];
-    });
-
-    setSelecionada(resposta);
+  let nova = {
+    id: questao.id,
+    resposta: resposta,
+    acertou: resposta === (questao.correta - 1),
   };
+
+  setRespostas((prev) => {
+    const idx = prev.findIndex((r) => r.id === questao.id);
+    if (idx >= 0) {
+      const copia = [...prev];
+      copia[idx] = nova;
+      return copia;
+    }
+    return [...prev, nova];
+  });
+
+  setSelecionada(resposta);
+};
+
 
   if (finalizou) {
     return (
