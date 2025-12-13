@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import styles from "./page.module.css";
 import CronometroSidebar from "@components/CronometroSidebar";
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function SimuladoClient({ simulado, questoes, simuladoId }) {
@@ -45,24 +46,24 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   };
 
   const responder = (questao, resposta) => {
-  let nova = {
-    id: questao.id,
-    resposta: resposta,
-    acertou: resposta === (questao.correta - 1),
+    let nova = {
+      id: questao.id,
+      resposta: resposta,
+      acertou: resposta === (questao.correta - 1),
+    };
+
+    setRespostas((prev) => {
+      const idx = prev.findIndex((r) => r.id === questao.id);
+      if (idx >= 0) {
+        const copia = [...prev];
+        copia[idx] = nova;
+        return copia;
+      }
+      return [...prev, nova];
+    });
+
+    setSelecionada(resposta);
   };
-
-  setRespostas((prev) => {
-    const idx = prev.findIndex((r) => r.id === questao.id);
-    if (idx >= 0) {
-      const copia = [...prev];
-      copia[idx] = nova;
-      return copia;
-    }
-    return [...prev, nova];
-  });
-
-  setSelecionada(resposta);
-};
 
 
   if (finalizou) {
@@ -80,9 +81,8 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
           {respostas.map((r, i) => (
             <div
               key={i}
-              className={`${styles.resultadoItem} ${
-                r.acertou ? styles.certo : styles.errado
-              }`}
+              className={`${styles.resultadoItem} ${r.acertou ? styles.certo : styles.errado
+                }`}
             >
               <div className={styles.resultadoHeader}>
                 <strong>Questão {i + 1}</strong>
@@ -111,7 +111,7 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
       <CronometroSidebar />
       <div style={{ marginLeft: "18vw" }}>
         <div className={styles.page}>
-          <Link href="/simulados"> <img src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.buttonVoltar}/></Link>
+          <Link href="/simulados"> <img src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.buttonVoltar} /></Link>
         </div>
         <div className={styles.container}>
           <div className={styles.header}>
@@ -135,16 +135,14 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
                     </p>
                   ))}
               </div>
-
-              {/* Mostrar imagem do enunciado num <div><img/></div> se questao.img_enunciado != null */}
+              {questao.imagem && <Image src={questao.imagem} width={300} height={230}></Image>}
 
               <ul className={styles.listaAlternativas}>
                 {questao.alternativas.map((alt, i) => (
                   <li
                     key={i}
-                    className={`${styles.alternativa} ${
-                      selecionada === i ? styles.marcada : ""
-                    }`}
+                    className={`${styles.alternativa} ${selecionada === i ? styles.marcada : ""
+                      }`}
                     onClick={() => responder(questao, i)}
                   >
                     <div className={styles.letras}>

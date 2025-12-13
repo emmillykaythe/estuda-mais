@@ -3,13 +3,13 @@ import SimuladoClient from "./simulado-cliente";
 import styles from "../page.module.css";
 
 export default async function SimuladoPage({ params }) {
-  const { id } = params; 
+  const { id } = params;
 
   const simulados = await db.query("SELECT * FROM simulados WHERE id = $1", [
     id]
   );
 
-  const questoesRes = await db.query("SELECT * FROM questoes WHERE simulado_id = $1",[
+  const questoesRes = await db.query("SELECT * FROM questoes WHERE simulado_id = $1 order by id", [
     id]
   );
 
@@ -28,10 +28,10 @@ export default async function SimuladoPage({ params }) {
         questao.alternativa3,
         questao.alternativa4,
         questao.alternativa5,
-      ],
+      ], imagem: questao.img_enunciado
     });
   }
-  
+
   const simulado = simulados.rows[0];
   return (
     <SimuladoClient simulado={simulado} questoes={questoes} simuladoId={id} />

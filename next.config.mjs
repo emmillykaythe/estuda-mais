@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        remotePatterns: [new URL('https://rfgdwuzsvhsecn9q.public.blob.vercel-storage.com/**')],
+    },
+
+};
 
 export default nextConfig;
