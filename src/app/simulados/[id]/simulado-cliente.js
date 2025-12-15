@@ -7,7 +7,6 @@ import CronometroSidebar from "@components/CronometroSidebar";
 import Link from "next/link";
 import Image from "next/image";
 
-
 export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   const params = useParams();
   const [finalizou, setFinalizou] = useState(false);
@@ -19,14 +18,6 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   const getQuestao = (id) => questoes.find((q) => q.id === id);
   const getResposta = (id) => respostas.find((r) => r.id === id);
 
-  const isValidHttpUrl = (urlString) => {
-    try {
-      const url = new URL(urlString);
-      return url.protocol === "http:" || url.protocol === "https:";
-    } catch (error) {
-      return false;
-    }
-  };
   const tratarProxima = () => {
     const novo = Math.min(questaoAtual + 1, questoes.length - 1);
     const r = getResposta(questoes[novo].id);
@@ -46,10 +37,10 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
   };
 
   const responder = (questao, resposta) => {
-    let nova = {
+    const nova = {
       id: questao.id,
-      resposta: resposta,
-      acertou: resposta === (questao.correta - 1),
+      resposta,
+      acertou: resposta === questao.correta - 1,
     };
 
     setRespostas((prev) => {
@@ -65,6 +56,30 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
     setSelecionada(resposta);
   };
 
+  const renderConteudo = (conteudo) => {
+    if (!conteudo) return null;
+
+    return conteudo
+      .replace(/\r/g, "")
+      .split("\n")
+      .map((linha, i) => {
+        const img = linha.match(/!\[(.*?)\]\((.*?)\)/);
+
+        if (img) {
+          return (
+            <Image key={i} src={img[2]} alt={img[1] || "imagem da questão"} width={1000} height={600} sizes="100vw"
+             style={{ width: "100%", height: "auto" }}
+            />
+          );
+        }
+
+        return (
+          <p key={i} className={styles.paragrafo}>
+            {linha}
+          </p>
+        );
+      });
+  };
 
   if (finalizou) {
     return (
@@ -78,29 +93,34 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
         </div>
 
         <div className={styles.listagemResultados}>
-          {respostas.map((r, i) => (
-            <div
-              key={i}
-              className={`${styles.resultadoItem} ${r.acertou ? styles.certo : styles.errado
+          {respostas.map((r, i) => {
+            const q = getQuestao(r.id);
+            return (
+              <div
+                key={i}
+                className={`${styles.resultadoItem} ${
+                  r.acertou ? styles.certo : styles.errado
                 }`}
-            >
-              <div className={styles.resultadoHeader}>
-                <strong>Questão {i + 1}</strong>
-                <span>{r.acertou ? "✔ Acertou" : "✘ Errou"}</span>
+              >
+                <div className={styles.resultadoHeader}>
+                  <strong>Questão {i + 1}</strong>
+                  <span>{r.acertou ? "✔ Acertou" : "✘ Errou"}</span>
+                </div>
+
+                <div className={styles.minhaResposta}>
+                  <strong>Sua resposta:</strong>{""}
+                  {renderConteudo(q.alternativas[r.resposta])}
+                </div>
+
+                {!r.acertou && (
+                  <div className={styles.respostaCorreta}>
+                    <strong>Correta:</strong>
+                    {renderConteudo(q.alternativas[q.correta - 1])}
+                  </div>
+                )}
               </div>
-
-              <p className={styles.minhaResposta}>
-                Sua resposta: {getQuestao(r.id).alternativas[r.resposta]}
-              </p>
-
-              {!r.acertou && (
-                <p className={styles.respostaCorreta}>
-                  Correta:{" "}
-                  {getQuestao(r.id).alternativas[getQuestao(r.id).correta - 1]}
-                </p>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     );
@@ -111,8 +131,17 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
       <CronometroSidebar />
       <div style={{ marginLeft: "18vw" }}>
         <div className={styles.page}>
-          <Link href="/simulados"> <img src="/voltar.png" width={24} height={24} alt="Voltar" className={styles.buttonVoltar} /></Link>
+          <Link href="/simulados">
+            <img
+              src="/voltar.png"
+              width={24}
+              height={24}
+              alt="Voltar"
+              className={styles.buttonVoltar}
+            />
+          </Link>
         </div>
+
         <div className={styles.container}>
           <div className={styles.header}>
             <span className={styles.label}>Questão</span>
@@ -126,23 +155,16 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
           {questao && (
             <div className={styles.containerQuestao}>
               <div className={styles.enunciado}>
-                {questao.enunciado
-                  .replace("\r", "")
-                  .split("\n")
-                  .map((q, i) => (
-                    <p className={styles.paragrafo} key={i}>
-                      {q}
-                    </p>
-                  ))}
+                {renderConteudo(questao.enunciado)}
               </div>
-              {questao.imagem && <Image src={questao.imagem} width={300} height={230}></Image>}
 
               <ul className={styles.listaAlternativas}>
                 {questao.alternativas.map((alt, i) => (
                   <li
                     key={i}
-                    className={`${styles.alternativa} ${selecionada === i ? styles.marcada : ""
-                      }`}
+                    className={`${styles.alternativa} ${
+                      selecionada === i ? styles.marcada : ""
+                    }`}
                     onClick={() => responder(questao, i)}
                   >
                     <div className={styles.letras}>
@@ -150,7 +172,7 @@ export default function SimuladoClient({ simulado, questoes, simuladoId }) {
                     </div>
 
                     <div className={styles.texto}>
-                      {isValidHttpUrl(alt) ? "Criar a imagem" : alt}
+                      {renderConteudo(alt)}
                     </div>
                   </li>
                 ))}

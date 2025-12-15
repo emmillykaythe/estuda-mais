@@ -165,3 +165,9 @@
 .paragrafo {
   margin-bottom: 0.5rem;
 }
+
+.respostaLinha {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
