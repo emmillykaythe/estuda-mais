@@ -1,7 +1,7 @@
-import db from "@/lib/db";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { getSimulados } from "@/lib/simuladoRepository";
 
 function Assuntos({ id, title, description }) {
   return (
@@ -21,8 +21,7 @@ function Assuntos({ id, title, description }) {
 }
 
 export default async function Home() {
-  const result = await db.query("SELECT id, title, description FROM simulados");
-  const dados = result.rows;
+  const dados = await getSimulados();
 
   return (
     <div className={styles.page}>
